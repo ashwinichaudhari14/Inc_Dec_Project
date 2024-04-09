@@ -1,0 +1,40 @@
+<html>
+  <title>js</title>
+  <head>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<div class="bg-[#344151] w-[110vw] h-[100vh] flex flex-col items-center justify-center gap-10">
+<div class="font-medium text-[#0398d4] text-[20px]">icrement and Decrement</div>
+
+<div class="flex bg-white text[25px] text[#344151] rounded-sm p-3 px-5 gap-12">
+  <button onclick="decrement()" class="border-r-2 border-[#bfbfbf] pr-5">-</button>
+
+  <div id="counter" class="font-bold">6</div>
+
+  <button onclick="increment()" class="border-l-2 border[#bfbfbf] pl-5">+</button>
+</div>
+
+</div>
+<script>
+    const countValue = document.querySelector('#counter');
+
+const increment = () => {
+    //get the value
+  let value = parseInt(countValue.innerText);
+    //update the value
+  value = value + 1;
+    //set the value
+  countValue.innerText = value;
+};
+
+const decrement = () => {
+   //get the value
+  let value = parseInt(countValue.innerText);
+  //update the value
+  value=value - 1 ;
+  //set the value
+  countValue.innerText = value;
+};
+</script>
+  </body>
+</html>
